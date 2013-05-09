@@ -26,6 +26,9 @@ const char image[num_rows] ={B11111111,\
 							 B11000001,\
 							 B11111111};
 
+// Bitmask for logical AND
+char bitmask = B00000001;
+
 void setup()
 {
 	// Set up rows
@@ -58,7 +61,7 @@ void loop()
 			for(int c = 0; c < num_cols; c++)
 			{
 				// Check which cols have to be switched on
-				if(image[r][c])
+				if((image[r]>>c) & bitmask)
 					digitalWrite(start_cols + 2*c, HIGH);
 				else
 					digitalWrite(start_cols + 2*c, LOW);
