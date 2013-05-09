@@ -35,4 +35,26 @@ void setup()
 
 void loop()
 {
+	// Iterate rows
+	for(int r = 0; r < num_rows; r++)
+	{
+		// Switch on a row
+		digitalWrite(start_rows + 2*r, HIGH);
+		
+		// Iterate Cols
+		for(int c = 0; c < num_cols; c++)
+		{
+			//ToDo: See what columns have to be switched on
+		}
+		
+		// Iterate Cols
+		for(int c = 0; c < num_cols; c++)
+		{
+			// Switch off cols again
+			digitalWrite(start_cols + 2*c, LOW);
+		}
+		
+		// Switch off row again
+		digitalWrite(start_rows + 2*r, LOW);
+	}
 }
