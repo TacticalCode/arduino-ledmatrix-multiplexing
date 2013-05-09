@@ -58,7 +58,11 @@ void loop()
 			// Iterate Cols
 			for(int c = 0; c < num_cols; c++)
 			{
-				//ToDo: See what columns have to be switched on
+				// Check which cols have to be switched on
+				if(image[r][c])
+					digitalWrite(start_cols + 2*c, HIGH);
+				else
+					digitalWrite(start_cols + 2*c, LOW);
 			}
 			
 			// Iterate Cols
