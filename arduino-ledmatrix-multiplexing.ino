@@ -16,16 +16,15 @@ const int start_cols = 22;
 const int num_rows = 8;
 const int num_cols = 8;
 
-// Two-dimensional Array represents LEDs of the Matrix
-const char image[num_rows][num_cols] = {\
-							{1, 1, 1, 1, 1, 1, 1, 1},\
-							{1, 0, 0, 0, 0, 0, 1, 1},\
-							{1, 0, 0, 0, 0, 1, 0, 1},\
-							{1, 0, 0, 0, 1, 0, 0, 1},\
-							{1, 0, 0, 1, 0, 0, 0, 1},\
-							{1, 0, 1, 0, 0, 0, 0, 1},\
-							{1, 1, 0, 0, 0, 0, 0, 1},\
-							{1, 1, 1, 1, 1, 1, 1, 1}	};
+// 1-Dimensional Array, Bits represent LEDs
+const char image[num_rows] ={B11111111,\
+							 B10000011,\
+							 B10000101,\
+							 B10001001,\
+							 B10010001,\
+							 B10100001,\
+							 B11000001,\
+							 B11111111};
 
 void setup()
 {
